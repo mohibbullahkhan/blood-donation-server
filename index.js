@@ -85,7 +85,7 @@ async function initDb() {
   console.log("Connected to MongoDB");
 }
 
-// --- Public Routes ---
+// --- Public Routes setup---
 app.get("/", (req, res) => {
   res.json({ message: "Blood Donation API running" });
 });
