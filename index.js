@@ -583,7 +583,7 @@ app.delete("/donation-requests/:id", async (req, res) => {
   }
 });
 
-// All donation requests
+// All donation requests setup
 
 app.get("/dashboard/all-blood-donation-request", async (req, res) => {
   const { page = 1, limit = 10, status } = req.query;
