@@ -15,7 +15,7 @@ var admin = require("firebase-admin");
 // var serviceAccount = require("./firebase-admin-sdk.json");
 
 // admin.initializeApp({
-//   credential: admin.credential.cert(serviceAccount),
+//
 // });
 const fbServiceKey = JSON.parse(process.env.FB_SERVICE_KEY);
 
