@@ -378,7 +378,7 @@ app.patch("/users", async (req, res) => {
   }
 });
 
-// --- Admin Routes ---
+// --- Admin Routes setup---
 
 app.get("/admin/dashboard-stats", async (req, res) => {
   try {
