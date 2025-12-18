@@ -512,7 +512,7 @@ app.patch("/users/update-status/:email", async (req, res) => {
   }
 });
 
-// --- General Request Update/Delete Routes ---
+// --- General Request Update/Delete Routes setup---
 
 app.patch("/donation-requests/status/:id", async (req, res) => {
   const requestId = req.params.id;
