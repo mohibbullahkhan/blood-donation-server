@@ -678,7 +678,7 @@ app.patch("/donation-requests/assign-donor/:id", async (req, res) => {
   }
 });
 
-// --- Public Routes ---
+// --- Public Routes setup ---
 
 app.get("/blood-requests/public-pending", async (req, res) => {
   try {
