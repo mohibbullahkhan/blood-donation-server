@@ -729,7 +729,7 @@ app.get("/donation-requests/:id", async (req, res) => {
   }
 });
 
-// --- Funding and Payment Routes ---
+// --- Funding and Payment Routes setup ---
 
 app.post("/create-funding-checkout-session", async (req, res) => {
   const { amount, donatorEmail, donatorName } = req.body;
