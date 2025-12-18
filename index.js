@@ -833,19 +833,6 @@ app.get("/funding/payment-success-handler", async (req, res) => {
   }
 });
 
-// app.get("/fundings/history", async (req, res) => {
-//   try {
-//     const history = await fundingsCollection
-//       .find({})
-//       .sort({ paidAt: -1 })
-//       .toArray();
-
-//     res.send(history);
-//   } catch (error) {
-//     console.error("Error fetching funding history:", error);
-//     res.status(500).send({ message: "Failed to fetch funding history." });
-//   }
-// });
 app.get("/fundings/history", async (req, res) => {
   try {
     const email = req.query.email; // Get email from query: /fundings/history?email=user@example.com
