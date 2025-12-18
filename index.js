@@ -484,7 +484,7 @@ app.patch("/users/update-role/:email", async (req, res) => {
   }
 });
 
-// 4. Admin: Update User Status (Block/Unblock)
+// 4. Admin: Update User Status setup (Block/Unblock)
 app.patch("/users/update-status/:email", async (req, res) => {
   const userEmail = req.params.email;
   const { status } = req.body;
