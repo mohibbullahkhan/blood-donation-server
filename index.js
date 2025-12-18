@@ -23,7 +23,6 @@ admin.initializeApp({
   credential: admin.credential.cert({
     projectId: fbServiceKey.project_id,
     clientEmail: fbServiceKey.client_email,
-    // This handles the newline characters in the private key correctly
     privateKey: fbServiceKey.private_key.replace(/\\n/g, "\n"),
   }),
 });
