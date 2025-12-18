@@ -12,8 +12,6 @@ app.use(cors());
 app.use(express.json());
 var admin = require("firebase-admin");
 
-// var serviceAccount = require("./firebase-admin-sdk.json");
-
 const fbServiceKey = JSON.parse(process.env.FB_SERVICE_KEY);
 
 admin.initializeApp({
