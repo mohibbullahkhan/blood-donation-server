@@ -63,7 +63,6 @@ const verifyAdmin = async (req, res, next) => {
     res.status(500).send({ message: "Server error during authorization." });
   }
 };
-// --------------------------------------------------------
 
 let dbClient = null;
 let userCollection = null;
