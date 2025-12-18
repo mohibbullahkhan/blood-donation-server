@@ -835,11 +835,11 @@ app.get("/funding/payment-success-handler", async (req, res) => {
 
 app.get("/fundings/history", async (req, res) => {
   try {
-    const email = req.query.email; // Get email from query: /fundings/history?email=user@example.com
+    const email = req.query.email;
 
     let query = {};
     if (email) {
-      query = { donatorEmail: email }; // Filter by email if provided
+      query = { donatorEmail: email };
     }
 
     const history = await fundingsCollection
