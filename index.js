@@ -458,7 +458,7 @@ app.get("/users/all", verifyFBToken, verifyAdmin, async (req, res) => {
   }
 });
 
-// 3. Admin: Update User Role (Make Admin/Volunteer)
+// 3. Admin: Update User Role setup (Make Admin/Volunteer)
 app.patch("/users/update-role/:email", async (req, res) => {
   const userEmail = req.params.email;
   const { role } = req.body;
