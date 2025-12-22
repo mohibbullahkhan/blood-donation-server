@@ -12,15 +12,28 @@ app.use(cors());
 app.use(express.json());
 var admin = require("firebase-admin");
 
-const fbServiceKey = JSON.parse(process.env.FB_SERVICE_KEY);
+const decoded = Buffer.from(process.env.FB_SERVICE_KEY, "base64").toString(
+  "utf8"
+);
+const serviceAccount = JSON.parse(decoded);
 
 admin.initializeApp({
   credential: admin.credential.cert({
-    projectId: fbServiceKey.project_id,
-    clientEmail: fbServiceKey.client_email,
-    privateKey: fbServiceKey.private_key.replace(/\\n/g, "\n"),
+    projectId: serviceAccount.project_id,
+    clientEmail: serviceAccount.client_email,
+    privateKey: serviceAccount.private_key.replace(/\\n/g, "\n"),
   }),
 });
+
+// const fbServiceKey = JSON.parse(process.env.FB_SERVICE_KEY);
+
+// admin.initializeApp({
+//   credential: admin.credential.cert({
+//     projectId: fbServiceKey.project_id,
+//     clientEmail: fbServiceKey.client_email,
+//     privateKey: fbServiceKey.private_key.replace(/\\n/g, "\n"),
+//   }),
+// });
 
 const verifyFBToken = async (req, res, next) => {
   const token = req.headers.authorization;
